@@ -73,7 +73,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/lessaosp/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
@@ -101,16 +101,18 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor cust
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
-BOARD_SUPER_PARTITION_SIZE := 5167382528
+#BOARD_SUPER_PARTITION_SIZE := 5167382528
+BOARD_SUPER_PARTITION_SIZE := 6039797760  # 5.625GB for GAPPS
 BOARD_SUPER_PARTITION_CUST_DEVICE_SIZE := 872415232
 BOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE := 3221225472
 BOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE := 1073741824
 
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 5163188224 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB overhead
+#BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 5163188224 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB overhead
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 5767168000
 
-include vendor/lineage/config/BoardConfigReservedSize.mk
+include vendor/lessaosp/config/BoardConfigReservedSize.mk
 
 # Reserve Extra Space to prevent issues - 50MB size
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 52428800

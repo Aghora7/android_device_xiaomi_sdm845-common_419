@@ -244,7 +244,7 @@
     NORMAL also preserves durability in non-WAL modes and uses checksums to ensure
     integrity although there is a small chance that an error might go unnoticed.
     Choices are: FULL, NORMAL, OFF. -->
-    <string name="db_default_sync_mode" translatable="false">OFF</string>
+    <string name="db_default_sync_mode" translatable="false">OFF</string> 
 
     <!-- The database synchronization mode when using Write-Ahead Logging.
     From https://www.sqlite.org/pragma.html#pragma_synchronous:
@@ -268,4 +268,5 @@
 
      <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
      <bool name="config_zramWriteback">true</bool>
+     
 </resources>
